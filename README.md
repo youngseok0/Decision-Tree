@@ -1,5 +1,6 @@
 # Decision-Tree
-이 레포지터리에서 설명하는 내용은 파이썬 머신러닝 완벽 가이드 책에 나오는 내용을 정리한 것임
+이 레포지터리에서 설명하는 내용은 파이썬 머신러닝 완벽 가이드 책에 나오는 내용을 정리한 것임<br>
+개인적으로 파이썬 머신러닝 완벽가이드를 사서 읽어보는 것을 추천함
 ### Decision Tree 란?
 &nbsp;결정 트리(Decision Tree)란 데이터에 있는 규칙을 학습을 통해 자동으로 찾아내 트리 기반의 분류 규칙을 만드는 것이다.
 <img src="https://cdn.discordapp.com/attachments/700926550945693846/700926574383464488/Decision_Tree.png" title="Decision Tree structure" alt="Decision Tree structure"></img><br>
