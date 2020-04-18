@@ -59,8 +59,8 @@
 ### Decision Tree의 과적합
 사이킷런은 분류를 위한 테스트용 데이터를 쉽게 만들 수 있도록 make_classification() 함수를 제공한다. 이 함수로 2개의 피처가 3가지 유형의 클래스 값을 가지는 데이터셋을 만들고 시각화해 보면 다음과 같은 그래프가 만들어진다.
 <img src="https://cdn.discordapp.com/attachments/700926550945693846/700990698584932422/AJ1uTWvQkpTIAAAAAElFTkSuQmCC.png" title="made dataset" alt="made dataset"></img><br>
-이렇게 생성된 데이터셋을 아무런 하이퍼 파라미터도 건드리지 않은 결정 트리로 학습 시키면 다음과 같은 영역으로 나뉜다.
-<img src="https://cdn.discordapp.com/attachments/700926550945693846/700990721359872424/gEAwD9ApwsAoCCELgCA0AghC6AAAKQugCACgIoQsAoCCELgCAgv4A1Xv3t15qcE0AAAAASUVORK5CYII.png" title="default decision tree boundary" alt="default decision tree boundary"></img><br>
-다음으로 min_samples_leaf=6으로 하이퍼 파라미터를 조정한 후 결정 트리를 학습 시키면 다음과 같은 영역으로 나뉜다.
+이렇게 생성된 데이터셋을 아무런 하이퍼 파라미터도 건드리지 않은 결정 트리로 학습 시키면 다음과 같은 영역으로 나뉜다.<img src="https://cdn.discordapp.com/attachments/700926550945693846/700990721359872424/gEAwD9ApwsAoCCELgCA0AghC6AAAKQugCACgIoQsAoCCELgCAgv4A1Xv3t15qcE0AAAAASUVORK5CYII.png" title="default decision tree boundary" alt="default decision tree boundary"></img><br>
+리프 노드 안에 데이터가 모두 균일하거나 하나만 존재해야 하는 엄격함 분할 기준으로 인해 결정 기준 경계가 많아지고 복잡해졌다. 이렇게 복잡한 모델은 학습 데이터 세트의 특성과 약간만 다른 형태의 데이터 세트를 예측하면 예측 정확도가 떨어지게 된다.<br>
+&nbsp;다음으로 min_samples_leaf=6으로 하이퍼 파라미터를 조정한 후 결정 트리를 학습 시키면 다음과 같은 영역으로 나뉜다.
 <img src="https://cdn.discordapp.com/attachments/700926550945693846/700990738451791892/sgYEREZipUuEZGJGLpERCZi6BIRmYihS0RkIoYuEZGJGLpERCb6HSuk1aiIuxhpAAAAAElFTkSu0AQmCC.png" title="min_samples_leaf=6 decision tree boundary" alt="min_samples_leaf=6 decision tree boundary"></img><br>
 위의 그림을 살펴보면 이상치에 크게 반응하지 않으면서 좀 더 일반화된 분류 규칙에 따라 분류됐음을 알 수 있다.
